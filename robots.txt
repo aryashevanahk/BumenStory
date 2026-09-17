@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bumenstory.vercel.app/sitemap.xml
+Sitemap: https://bumen-story.vercel.app/sitemap.xml

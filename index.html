@@ -28,8 +28,9 @@
   <header class="header" id="siteHeader">
     <nav class="nav container" aria-label="Navigasi utama">
       <a href="index.html" class="logo" aria-label="BUMENSTORY - Beranda">
-        🏛️ BUMEN<span>STORY</span>
-      </a>
+  <i data-feather="home"></i>
+  <span class="logo-text">BUMEN<span>STORY</span></span>
+</a>
 
       <button class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false">
         <span></span>
@@ -169,7 +170,7 @@
   <footer class="footer">
     <div class="footer-grid container">
       <div>
-        <h3>🏛️ BUMENSTORY</h3>
+        <h3><i data-feather="home"></i> BUMENSTORY</h3>
         <p>Menelusuri jejak sejarah, kuliner khas, dan budaya Kebumen (Bumi Tanduran) untuk generasi masa kini.</p>
       </div>
 
@@ -186,14 +187,18 @@
 
       <div>
         <h4>Kontak</h4>
-        <p>📧 aryashevana20@gmail.com</p>
-        <p>📍 Balaraja, Kab.Tangerang, Banten</p>
-        <p>📷 ▶️ 🐦</p>
+        <p><i data-feather="mail"></i> aryashevana20@gmail.com</p>
+        <p><i data-feather="map-pin"></i> Balaraja, Kab. Tangerang, Banten</p>
+
+        <div class="social-icons">
+          <a href="https://www.instagram.com/aryshv_" aria-label="Instagram"><i data-feather="instagram"></i></a>
+          <a href="https://www.youtube.com/@aryashevanahk3956" aria-label="YouTube"><i data-feather="youtube"></i></a>
+        </div>
+
         <p class="footer-credit">
           <a href="https://www.flaticon.com/free-icons/favicon"
-             title="favicon icons"
-             target="_blank"
-             rel="noopener">
+            title="favicon icons"
+            target="_blank" rel="noopener">
             Favicon icons by Chanut-is-Industries
           </a>
         </p>
@@ -207,6 +212,8 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script>feather.replace();</script>
   <script src="js/script.js"></script>
 </body>
 </html>
