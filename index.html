@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO dasar -->
+  <title>BUMENSTORY - Sejarah, Kuliner, dan Budaya Kebumen</title>
+  <meta name="description" content="Jelajahi Kebumen (Bumi Tanduran) melalui BUMENSTORY. Temukan sejarah, kuliner khas Sate Ambal, dan budaya yang memikat." />
+  <link rel="canonical" href="https://bumenstory.com/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BUMENSTORY - Sejarah, Kuliner, dan Budaya Kebumen" />
+  <meta property="og:description" content="Jelajahi Bumi Tanduran, Kebumen. Temukan sejarah, kuliner khas, dan budayanya." />
+  <meta property="og:image" content="https://bumenstory.com/assets/img/og-image.jpg" />
+  <meta property="og:url" content="https://bumenstory.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="id_ID" />
+
+  <!-- Favicon & CSS -->
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="header" id="siteHeader">
+    <nav class="nav container" aria-label="Navigasi utama">
+      <a href="index.html" class="logo" aria-label="BUMENSTORY - Beranda">
+        🏛️ BUMEN<span>STORY</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="menu" id="menu">
+        <li><a href="index.html" class="active">Beranda</a></li>
+        <li><a href="sejarah/index.html">Sejarah</a></li>
+        <li><a href="kuliner/index.html">Kuliner</a></li>
+        <li><a href="budaya/index.html">Budaya</a></li>
+        <li><a href="tentang/index.html">Tentang</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-slide active" style="background-image:url('assets/img/hero-1.webp')"></div>
+      <div class="hero-slide" style="background-image:url('assets/img/hero-2.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('assets/img/hero-3.webp')"></div>
+    </div>
+
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <span class="hero-badge">Jelajahi Bumi Tanduran</span>
+      <h1>BUMENSTORY</h1>
+      <p class="hero-subtitle">
+        Menelusuri Jejak Sejarah, Kuliner Khas,<br />dan Budaya Kebumen
+      </p>
+      <div class="hero-buttons">
+        <a href="sejarah/index.html" class="btn btn-primary">Mulai Jelajah</a>
+        <a href="#konten-utama" class="btn btn-secondary">Lihat Konten</a>
+      </div>
+    </div>
+
+    <div class="hero-dots" aria-label="Pilih slide">
+      <button class="active" aria-label="Slide 1"></button>
+      <button aria-label="Slide 2"></button>
+      <button aria-label="Slide 3"></button>
+    </div>
+  </section>
+
+  <!-- Konten utama -->
+  <main id="konten-utama">
+
+    <!-- Pengenalan singkat -->
+    <section class="section section-white">
+      <div class="container">
+        <div class="section-title">
+          <h2>Apa itu BUMENSTORY?</h2>
+          <p>Portal informasi tentang Kabupaten Kebumen, Jawa Tengah.</p>
+        </div>
+
+        <div class="cards-3">
+          <article class="card-about">
+            <img src="assets/img/sejarah-card.jpeg" alt="Sejarah Kebumen" loading="lazy" />
+            <div class="card-body">
+              <span class="card-line"></span>
+              <h3><a href="sejarah/index.html">Sejarah</a></h3>
+              <p>Dari masa Mataram hingga julukan "Bumi Tanduran", simak asal-usul Kebumen.</p>
+            </div>
+          </article>
+
+          <article class="card-about">
+            <img src="assets/img/kuliner-card.jpeg" alt="Kuliner khas Kebumen" loading="lazy" />
+            <div class="card-body">
+              <span class="card-line"></span>
+              <h3><a href="kuliner/index.html">Kuliner</a></h3>
+              <p>Sate Ambal, Jenang, Nangka Gori, dan deretan makanan khas yang bikin ketagihan.</p>
+            </div>
+          </article>
+
+          <article class="card-about">
+            <img src="assets/img/budaya-card.jpeg" alt="Budaya dan tradisi Kebumen" loading="lazy" />
+            <div class="card-body">
+              <span class="card-line"></span>
+              <h3><a href="budaya/index.html">Budaya</a></h3>
+              <p>Tradisi, kesenian, dan kearifan lokal masyarakat Kebumen yang masih lestari.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cuplikan sejarah (teks kiri, gambar kanan) -->
+    <section class="section">
+      <div class="container preview">
+        <div class="preview-text">
+          <span class="preview-tag">Sejarah</span>
+          <h2>Asal Usul "Bumi Tanduran"</h2>
+          <p>Julukan "Bumi Tanduran" berasal dari masa Kesultanan Mataram, di mana wilayah Kebumen dijadikan tempat peristirahatan dan penanaman logistik untuk pasukan. Nama "Kebumen" sendiri diyakini berasal dari kata "Ke-Bumi-an".</p>
+          <a href="sejarah/index.html" class="btn btn-primary">Jelajahi Sejarah</a>
+        </div>
+        <div class="preview-image">
+          <img src="assets/img/sejarah-preview.jpg" alt="Suasana sejarah Kebumen" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Cuplikan kuliner (gambar kiri, teks kanan → zigzag) -->
+    <section class="section">
+      <div class="container preview">
+        <div class="preview-image">
+          <img src="assets/img/kuliner-preview.jpeg" alt="Kuliner khas Kebumen" loading="lazy" />
+        </div>
+        <div class="preview-text">
+          <span class="preview-tag">Kuliner</span>
+          <h2>Sate Ambal &amp; Jenang Khas</h2>
+          <p>Sate Ambal dengan bumbu kacangnya yang gurih dan Jenang yang manis legit adalah dua ikon kuliner Kebumen. Jangan lewatkan juga Nangka Gori dan berbagai olahan laut dari pesisir selatan.</p>
+          <a href="kuliner/index.html" class="btn btn-primary">Jelajahi Kuliner</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cuplikan budaya (teks kiri, gambar kanan) -->
+    <section class="section">
+      <div class="container preview">
+        <div class="preview-text">
+          <span class="preview-tag">Budaya</span>
+          <h2>Tradisi &amp; Kesenian Lokal</h2>
+          <p>Dari kesenian Lengger, tradisi Sadranan, hingga ritual sedekah laut, budaya Kebumen kaya akan nilai-nilai spiritual dan gotong royong yang diwariskan turun-temurun.</p>
+          <a href="budaya/index.html" class="btn btn-primary">Jelajahi Budaya</a>
+        </div>
+        <div class="preview-image">
+          <img src="assets/img/budaya-preview.jpg" alt="Budaya dan tradisi Kebumen" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid container">
+      <div>
+        <h3>🏛️ BUMENSTORY</h3>
+        <p>Menelusuri jejak sejarah, kuliner khas, dan budaya Kebumen (Bumi Tanduran) untuk generasi masa kini.</p>
+      </div>
+
+      <div>
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="sejarah/index.html">Sejarah</a></li>
+          <li><a href="kuliner/index.html">Kuliner</a></li>
+          <li><a href="budaya/index.html">Budaya</a></li>
+          <li><a href="tentang/index.html">Tentang</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Kontak</h4>
+        <p>📧 aryashevana20@gmail.com</p>
+        <p>📍 Balaraja, Kab.Tangerang, Banten</p>
+        <p>📷 ▶️ 🐦</p>
+        <p class="footer-credit">
+          <a href="https://www.flaticon.com/free-icons/favicon"
+             title="favicon icons"
+             target="_blank"
+             rel="noopener">
+            Favicon icons by Chanut-is-Industries
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 BUMENSTORY — Tugas Individu Pemrograman Web 1 | Arya Shevana H.K.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
