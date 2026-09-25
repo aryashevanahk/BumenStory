@@ -1,8 +1,3 @@
-/* BUMENSTORY — style.css
-   Warna dari kebumenkab.go.id (biru + hijau)
-   Arya Shevana H.K. | Pemrograman Web 1
-*/
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -30,7 +25,6 @@ img { max-width: 100%; display: block; border-radius: 8px; }
 a { color: #0d6efd; text-decoration: none; }
 a:hover { color: #0a58ca; }
 
-/* Tombol */
 .btn {
   display: inline-block;
   padding: 10px 24px;
@@ -60,7 +54,6 @@ a:hover { color: #0a58ca; }
 }
 .btn-secondary:hover { background: #0d6efd; color: #fff; }
 
-/* Navbar */
 .header {
   position: sticky;
   top: 0;
@@ -121,7 +114,6 @@ a:hover { color: #0a58ca; }
 .menu a:hover { background: #f8f9fa; color: #0d6efd; }
 .menu a.active { color: #0d6efd; font-weight: bold; }
 
-/* Hero */
 .hero {
   position: relative;
   min-height: 500px;
@@ -218,7 +210,6 @@ a:hover { color: #0a58ca; }
   border-radius: 6px;
 }
 
-/* Section */
 .section { padding: 60px 0; background: #f8f9fa; }
 .section-white { background: #fff; }
 .section-cream { background: #f0f7ff; }
@@ -238,7 +229,6 @@ a:hover { color: #0a58ca; }
   line-height: 1.8;
 }
 
-/* Card About */
 .cards-3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -277,7 +267,6 @@ a:hover { color: #0a58ca; }
 .card-about h3 a:hover { color: #0d6efd; }
 .card-about p { color: #555; font-size: 14px; }
 
-/* Preview */
 .preview {
   display: flex;
   align-items: center;
@@ -297,6 +286,22 @@ a:hover { color: #0a58ca; }
   border-radius: 8px;
 }
 
+/* Video preview (untuk embed YouTube) */
+.preview-video {
+  flex: 1 1 45%;
+  aspect-ratio: 842 / 508;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,.08);
+}
+
+.preview-video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 .preview-tag {
   display: inline-block;
   padding: 4px 14px;
@@ -312,7 +317,6 @@ a:hover { color: #0a58ca; }
 .preview-text h2 { font-size: 26px; margin-bottom: 14px; }
 .preview-text p { color: #555; margin-bottom: 18px; }
 
-/* Form */
 .form { max-width: 600px; margin: 0 auto; }
 .form-group { margin-bottom: 18px; }
 
@@ -343,22 +347,6 @@ a:hover { color: #0a58ca; }
   min-height: 120px;
 }
 
-/* Timeline */
-.timeline {
-  background: #f8f9fa;
-  padding: 24px;
-  border: 1px solid #dee2e6;
-  border-radius: 12px;
-}
-.timeline-item {
-  display: flex;
-  gap: 16px;
-  padding: 10px 0 10px 18px;
-  border-left: 4px solid #0d6efd;
-}
-.timeline-item strong { min-width: 80px; color: #0d6efd; }
-
-/* Tabel */
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -380,7 +368,15 @@ a:hover { color: #0a58ca; }
   font-size: 14px;
 }
 
-/* Footer */
+.table-scroll { overflow-x: auto; }
+
+.table-note {
+  text-align: center;
+  margin-top: 16px;
+  color: #6c757d;
+  font-size: 13px;
+}
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -459,7 +455,6 @@ a:hover { color: #0a58ca; }
   color: #6c757d;
 }
 
-/* Feather Icons */
 svg.feather {
   width: 16px;
   height: 16px;
@@ -525,6 +520,196 @@ svg.feather {
 
 .social-icons a:hover svg.feather { color: #fff; }
 
+/* Hero untuk sub-halaman (lebih pendek dari hero index) */
+.hero--page {
+  min-height: 380px;
+  text-align: center;
+}
+
+.hero--page .hero-content {
+  padding: 60px 20px;
+}
+
+.hero--page .hero-badge {
+  background: rgba(255, 255, 255, .25);
+  font-size: 12px;
+}
+
+/* Closing box (penutup halaman) */
+.closing-box {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.closing-box h3 {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+.closing-box p {
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Referensi */
+.ref-list {
+  max-width: 750px;
+  margin: 0 auto;
+  padding-left: 22px;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.ref-list li { margin-bottom: 6px; }
+.ref-list em { color: #0d6efd; font-style: italic; }
+
+/* Timeline Interaktif */
+.timeline {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Navigasi dot horizontal (desktop) */
+.timeline-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+/* Garis horizontal penghubung dot */
+.timeline-nav::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  right: 40px;
+  height: 2px;
+  background: #dee2e6;
+  z-index: 0;
+}
+
+.timeline-dot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  transition: transform .2s;
+}
+
+.timeline-dot:hover { transform: translateY(-3px); }
+
+.dot-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #dee2e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s;
+}
+
+.dot-icon svg {
+  width: 18px;
+  height: 18px;
+  color: #6c757d;
+  stroke-width: 2.2;
+}
+
+.dot-year {
+  font-size: 13px;
+  font-weight: bold;
+  color: #6c757d;
+  transition: color .3s;
+}
+
+/* State ACTIVE — per era */
+.timeline-dot.era-kuno.active .dot-icon {
+  background: #0d6efd;
+  border-color: #0d6efd;
+  box-shadow: 0 4px 12px rgba(13,110,253,.35);
+}
+.timeline-dot.era-kuno.active .dot-icon svg { color: #fff; }
+.timeline-dot.era-kuno.active .dot-year { color: #0d6efd; }
+
+.timeline-dot.era-kolonial.active .dot-icon {
+  background: #ffc107;
+  border-color: #ffc107;
+  box-shadow: 0 4px 12px rgba(255,193,7,.4);
+}
+.timeline-dot.era-kolonial.active .dot-icon svg { color: #212529; }
+.timeline-dot.era-kolonial.active .dot-year { color: #997404; }
+
+.timeline-dot.era-modern.active .dot-icon {
+  background: #198754;
+  border-color: #198754;
+  box-shadow: 0 4px 12px rgba(25,135,84,.35);
+}
+.timeline-dot.era-modern.active .dot-icon svg { color: #fff; }
+.timeline-dot.era-modern.active .dot-year { color: #198754; }
+
+/* Panel detail */
+.timeline-panels {
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.06);
+}
+
+.timeline-panel { display: none; }
+.timeline-panel.active { display: block; }
+
+.panel-era {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 12px;
+}
+
+.panel-era.era-kuno-text {
+  background: rgba(13,110,253,.1);
+  color: #0d6efd;
+}
+.panel-era.era-kolonial-text {
+  background: rgba(255,193,7,.2);
+  color: #997404;
+}
+.panel-era.era-modern-text {
+  background: rgba(25,135,84,.1);
+  color: #198754;
+}
+
+.timeline-panel h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #212529;
+}
+
+.timeline-panel p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.timeline-panel em { color: #198754; font-style: italic; }
+
 /* HP */
 @media (max-width: 768px) {
   .menu-btn { display: flex; }
@@ -557,9 +742,59 @@ svg.feather {
     text-align: center;
   }
 
-  .preview .preview-image { order: 2; }
-  .preview .preview-text  { order: 1; }
+    .preview .preview-image,
+    .preview .preview-video { order: 2; }
+
+    .preview .preview-text { order: 1; }
 
   .footer-grid { text-align: center; }
   .social-icons {justify-content: center;}
+
+  /* Timeline: tetap horizontal di HP, scroll kalau sempit */
+  .timeline-nav {
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 0 4px 14px;
+    margin-bottom: 24px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  /* Garis horizontal tetap */
+  .timeline-nav::before {
+    top: 18px;
+    left: 26px;
+    right: 26px;
+    bottom: auto;
+    width: auto;
+    height: 2px;
+  }
+
+  .timeline-dot {
+    flex-direction: column;
+    flex-shrink: 0;
+    min-width: 52px;
+    gap: 5px;
+  }
+
+  /* Hapus efek hover di HP (tidak relevan) */
+  .timeline-dot:hover { transform: none; }
+
+  .dot-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .dot-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .dot-year { font-size: 11px; }
+
+  .timeline-panels { padding: 22px; }
+  .timeline-panel h3 { font-size: 20px; }
+  .timeline-panel p { font-size: 14px; }
 }
