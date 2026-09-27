@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  function $(sel) { return document.querySelector(sel); }
-  function $$(sel) { return document.querySelectorAll(sel); }
+  function $(s) { return document.querySelector(s); }
+  function $$(s) { return document.querySelectorAll(s); }
 
   // navbar
   var header = $('#siteHeader');
@@ -42,8 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var DELAY = 10000;
 
   if (slides.length > 1) {
-    var cur = 0;
-    var timer;
+    var cur = 0, timer;
 
     function goTo(i) {
       slides[cur].classList.remove('active');
@@ -78,9 +77,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!tDots.length) return;
 
     for (var i = 0; i < tDots.length; i++) {
-      (function (index) {
-        tDots[index].addEventListener('click', function () {
-          showEvent(index);
+      (function (i) {
+        tDots[i].addEventListener('click', function () {
+          showEvent(i);
         });
       })(i);
     }
@@ -104,12 +103,27 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     if (tPanels[index]) {
       tPanels[index].classList.add('active');
-
       if (window.innerWidth <= 768) {
         tPanels[index].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
     }
   }
+
+  // accordion
+  (function () {
+    var items = $$('.accordion-item');
+    if (!items.length) return;
+
+    for (var i = 0; i < items.length; i++) {
+      (function (item) {
+        var b = item.querySelector('.accordion-btn');
+        if (!b) return;
+        b.addEventListener('click', function () {
+          item.classList.toggle('open');
+        });
+      })(items[i]);
+    }
+  })();
 
   // footer auto-height
   var footer = $('.footer');
