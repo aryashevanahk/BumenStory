@@ -125,6 +125,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   })();
 
+    // form kontak
+  (function () {
+    var form = document.getElementById('contactForm');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var nama = form.nama.value.trim();
+      alert('Terima kasih, ' + nama + '! Pesanmu sudah kami terima.');
+      form.reset();
+    });
+  })();
+
   // footer auto-height
   var footer = $('.footer');
 
