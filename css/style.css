@@ -238,7 +238,7 @@ a:hover { color: #0a58ca; }
   flex-wrap: wrap;
 }
 
-.preview-text, .preview-image { flex: 1 1 45%; }
+.preview-text, .preview-image { flex: 1 1 45%; text-align: justify;}
 
 .preview-image img {
   width: 100%;
@@ -577,6 +577,7 @@ svg.feather { width: 16px; height: 16px; stroke-width: 2; vertical-align: middle
   font-size: 14px;
   line-height: 1.7;
   margin-bottom: 14px;
+  text-align: justify;
 }
 
 .food-card__meta {
@@ -640,6 +641,62 @@ svg.feather { width: 16px; height: 16px; stroke-width: 2; vertical-align: middle
 }
 .accordion-item.open .accordion-body { display: block; }
 
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.info-card {
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 12px;
+  padding: 24px 20px;
+  text-align: center;
+  transition: box-shadow .3s;
+}
+
+.info-card:hover { box-shadow: 0 8px 20px rgba(0,0,0,.1); }
+
+.info-card svg.feather {
+  width: 32px;
+  height: 32px;
+  color: #0d6efd;
+  margin-bottom: 10px;
+  stroke-width: 1.8;
+}
+
+.info-card h4 {
+  font-size: 16px;
+  color: #212529;
+  margin-bottom: 8px;
+}
+
+.info-card p {
+  color: #555;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.food-grid--center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.food-grid--center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 /* HP */
 @media (max-width: 768px) {
   .menu-btn { display: flex; }
@@ -697,4 +754,20 @@ svg.feather { width: 16px; height: 16px; stroke-width: 2; vertical-align: middle
   .timeline-panels { padding: 22px; }
   .timeline-panel h3 { font-size: 20px; }
   .timeline-panel p { font-size: 14px; }
+
+  /* Food card lebih compact di HP */
+  .food-card img { height: 140px; }
+  .food-card__body { padding: 14px 16px; }
+  .food-card__title { font-size: 17px; margin: 6px 0; }
+  .food-card__desc { font-size: 13px; margin-bottom: 10px; }
+
+  /* Food grid center jadi full width di HP */
+  .food-grid--center { grid-template-columns: 1fr; gap: 16px; }
+
+  /* Info card compact — tetap 2x2 di HP */
+  .info-grid { gap: 12px; }
+  .info-card { padding: 16px 12px; }
+  .info-card svg.feather { width: 24px; height: 24px; margin-bottom: 6px; }
+  .info-card h4 { font-size: 13px; margin-bottom: 4px; }
+  .info-card p { font-size: 11px; line-height: 1.5; }
 }
