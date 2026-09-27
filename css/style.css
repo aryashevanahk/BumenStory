@@ -169,14 +169,29 @@ a:hover { color: #0a58ca; }
   gap: 8px;
 }
 .hero-dots button {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.hero-dots button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 10px;
   height: 10px;
-  border: none;
-  border-radius: 50%;
   background: rgba(255,255,255,.4);
-  cursor: pointer;
+  border-radius: 50%;
+  transition: all .3s;
 }
-.hero-dots button.active { background: #fff; width: 26px; border-radius: 6px; }
+
+.hero-dots button.active::after { background: #fff; width: 26px; border-radius: 6px; }
 
 /* Section */
 .section { padding: 60px 0; background: #f8f9fa; }
