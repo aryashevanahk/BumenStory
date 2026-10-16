@@ -140,6 +140,67 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   })();
 
+    // smooth scroll untuk anchor
+    $$('a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // lazy load video youtube
+    (function () {
+      var videos = $$('.preview-video iframe');
+      if (!videos.length) return;
+
+      videos.forEach(function (iframe) {
+        var src = iframe.src;
+        iframe.removeAttribute('src');
+        iframe.dataset.src = src;
+
+        var wrapper = iframe.parentElement;
+        wrapper.style.cursor = 'pointer';
+        wrapper.addEventListener('click', function () {
+          iframe.src = iframe.dataset.src + '?autoplay=1';
+          wrapper.classList.add('playing');
+          wrapper.style.cursor = '';
+        });
+      });
+    })();
+
+    // lightbox untuk gambar
+    (function () {
+      var images = $$('.food-card img');
+      if (!images.length) return;
+
+      var lb = document.createElement('div');
+      lb.className = 'lightbox';
+      lb.innerHTML = '<img src="" alt="" />';
+      document.body.appendChild(lb);
+
+      var lbImg = lb.querySelector('img');
+
+      images.forEach(function (img) {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', function () {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt;
+          lb.classList.add('active');
+        });
+      });
+
+      lb.addEventListener('click', function () {
+        lb.classList.remove('active');
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') lb.classList.remove('active');
+      });
+    })();
+
   // footer auto-height
   var footer = $('.footer');
 
