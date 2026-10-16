@@ -151,26 +151,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
 
-    // lazy load video youtube
-    (function () {
-      var videos = $$('.preview-video iframe');
-      if (!videos.length) return;
-
-      videos.forEach(function (iframe) {
-        var src = iframe.src;
-        iframe.removeAttribute('src');
-        iframe.dataset.src = src;
-
-        var wrapper = iframe.parentElement;
-        wrapper.style.cursor = 'pointer';
-        wrapper.addEventListener('click', function () {
-          iframe.src = iframe.dataset.src + '?autoplay=1';
-          wrapper.classList.add('playing');
-          wrapper.style.cursor = '';
-        });
-      });
-    })();
-
     // lightbox untuk gambar
     (function () {
       var images = $$('.food-card img');
